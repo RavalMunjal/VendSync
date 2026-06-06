@@ -11,6 +11,8 @@ import Vendors from './pages/Vendors';
 import Rfqs from './pages/Rfqs';
 import CreateRfq from './pages/CreateRfq';
 import RfqDetail from './pages/RfqDetail';
+import SubmitQuote from './pages/SubmitQuote';
+import CompareQuotes from './pages/CompareQuotes';
 
 function App() {
   return (
@@ -27,6 +29,8 @@ function App() {
               <Route path="/rfqs" element={<Rfqs />} />
               <Route path="/rfqs/create" element={<CreateRfq />} />
               <Route path="/rfqs/:id" element={<RfqDetail />} />
+              <Route path="/submit-quote/:id" element={<SubmitQuote />} />
+              <Route path="/compare" element={<CompareQuotes />} />
               {/* Other routes will be added in subsequent phases */}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
