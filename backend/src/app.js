@@ -4,6 +4,10 @@ import helmet from 'helmet';
 import morgan from 'morgan';
 import cors from 'cors';
 
+import { errorHandler } from './middleware/errorHandler.js';
+import { apiLimiter, authLimiter } from './middleware/rateLimiter.js';
+import authRoutes from './routes/authRoutes.js';
+
 const app = express();
 
 // Middleware
@@ -17,6 +21,9 @@ app.use(cors({
   allowedHeaders: ['Content-Type', 'Authorization']
 }));
 
+// Routes
+app.use('/api/auth', authRoutes);
+
 // Basic Health Check Route
 app.get('/api/health', (req, res) => {
   res.json({ success: true, message: 'BidFlow API running' });
@@ -26,5 +33,8 @@ app.get('/api/health', (req, res) => {
 app.use('*', (req, res) => {
   res.status(404).json({ success: false, error: 'Route not found' });
 });
+
+// Global error handler (must be last)
+app.use(errorHandler);
 
 export default app;
