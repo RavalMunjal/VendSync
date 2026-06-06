@@ -468,7 +468,7 @@ VendorBridge aims to modernize procurement operations by reducing manual workflo
 
 ---
 
-# 👨‍💻 Developed By
+
 
 Your Name
 Full Stack Developer
