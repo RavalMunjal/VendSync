@@ -13,6 +13,7 @@ import rfqRoutes from './routes/rfqRoutes.js';
 import quotationRoutes from './routes/quotationRoutes.js';
 import approvalRoutes from './routes/approvalRoutes.js';
 import purchaseOrderRoutes from './routes/purchaseOrderRoutes.js';
+import invoiceRoutes from './routes/invoiceRoutes.js';
 
 const app = express();
 
@@ -35,6 +36,7 @@ app.use('/api/rfqs', apiLimiter, rfqRoutes);
 app.use('/api/quotations', apiLimiter, quotationRoutes);
 app.use('/api/approvals', apiLimiter, approvalRoutes);
 app.use('/api/purchase-orders', apiLimiter, purchaseOrderRoutes);
+app.use('/api/invoices', apiLimiter, invoiceRoutes);
 
 // Basic Health Check Route
 app.get('/api/health', (req, res) => {
