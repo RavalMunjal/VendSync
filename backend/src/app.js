@@ -7,6 +7,8 @@ import cors from 'cors';
 import { errorHandler } from './middleware/errorHandler.js';
 import { apiLimiter, authLimiter } from './middleware/rateLimiter.js';
 import authRoutes from './routes/authRoutes.js';
+import userRoutes from './routes/userRoutes.js';
+import vendorRoutes from './routes/vendorRoutes.js';
 
 const app = express();
 
@@ -22,7 +24,9 @@ app.use(cors({
 }));
 
 // Routes
-app.use('/api/auth', authRoutes);
+app.use('/api/auth', authLimiter, authRoutes);
+app.use('/api/users', apiLimiter, userRoutes);
+app.use('/api/vendors', apiLimiter, vendorRoutes);
 
 // Basic Health Check Route
 app.get('/api/health', (req, res) => {
