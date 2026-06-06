@@ -7,6 +7,7 @@ import Layout from './components/Layout';
 import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
+import Vendors from './pages/Vendors';
 
 function App() {
   return (
@@ -19,6 +20,7 @@ function App() {
           <Route element={<ProtectedRoute />}>
             <Route element={<Layout />}>
               <Route path="/" element={<Dashboard />} />
+              <Route path="/vendors" element={<Vendors />} />
               {/* Other routes will be added in subsequent phases */}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
