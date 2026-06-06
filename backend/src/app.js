@@ -10,6 +10,8 @@ import authRoutes from './routes/authRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import vendorRoutes from './routes/vendorRoutes.js';
 import rfqRoutes from './routes/rfqRoutes.js';
+import quotationRoutes from './routes/quotationRoutes.js';
+import approvalRoutes from './routes/approvalRoutes.js';
 
 const app = express();
 
@@ -29,6 +31,8 @@ app.use('/api/auth', authLimiter, authRoutes);
 app.use('/api/users', apiLimiter, userRoutes);
 app.use('/api/vendors', apiLimiter, vendorRoutes);
 app.use('/api/rfqs', apiLimiter, rfqRoutes);
+app.use('/api/quotations', apiLimiter, quotationRoutes);
+app.use('/api/approvals', apiLimiter, approvalRoutes);
 
 // Basic Health Check Route
 app.get('/api/health', (req, res) => {
