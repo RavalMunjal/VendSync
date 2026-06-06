@@ -1,5 +1,5 @@
-import React, { useState, useEffect } from 'react';
-import { useParams, useNavigate, Link } from 'react-router-dom';
+import { useState, useEffect } from 'react';
+import { useParams, useNavigate } from 'react-router-dom';
 import { useForm, useFieldArray } from 'react-hook-form';
 import { zodResolver } from '@hookform/resolvers/zod';
 import * as z from 'zod';
@@ -44,6 +44,7 @@ const SubmitQuote = () => {
     name: "items"
   });
 
+  // eslint-disable-next-line react-hooks/incompatible-library
   const watchItems = watch('items');
 
   useEffect(() => {
@@ -82,7 +83,7 @@ const SubmitQuote = () => {
         toast.success('Quotation submitted successfully!');
         navigate('/rfqs');
       }
-    } catch (error) {
+    } catch {
       toast.error('Failed to save quotation');
     } finally {
       setIsSubmitting(false);

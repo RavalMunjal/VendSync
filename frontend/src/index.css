@@ -1,9 +1,47 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap');
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
 @layer base {
   body {
-    @apply bg-gray-50 text-gray-900 antialiased;
+    @apply bg-light-bg text-gray-900 font-sans antialiased;
+  }
+  
+  .dark body {
+    @apply bg-dark-bg text-gray-100;
+  }
+}
+
+@layer components {
+  .glass-card {
+    @apply bg-white border border-light-border rounded-2xl shadow-sm transition-all duration-200 ease-in-out hover:-translate-y-0.5 hover:shadow-md;
+  }
+  
+  .dark .glass-card {
+    background: rgba(26, 29, 39, 0.8);
+    @apply border border-dark-border rounded-2xl transition-all duration-200 ease-in-out hover:-translate-y-0.5;
+    backdrop-filter: blur(12px);
+    -webkit-backdrop-filter: blur(12px);
+    box-shadow: 0 4px 24px rgba(0, 0, 0, 0.2);
+  }
+
+  .dark .glass-card:hover {
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* Top-border glows for stat cards */
+  .glow-border-purple {
+    border-top: 3px solid theme('colors.primary.DEFAULT');
+  }
+  .glow-border-green {
+    border-top: 3px solid theme('colors.success');
+  }
+  .glow-border-amber {
+    border-top: 3px solid theme('colors.warning');
+  }
+  .glow-border-blue {
+    border-top: 3px solid theme('colors.info');
   }
 }
