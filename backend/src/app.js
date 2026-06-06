@@ -14,6 +14,7 @@ import quotationRoutes from './routes/quotationRoutes.js';
 import approvalRoutes from './routes/approvalRoutes.js';
 import purchaseOrderRoutes from './routes/purchaseOrderRoutes.js';
 import invoiceRoutes from './routes/invoiceRoutes.js';
+import analyticsRoutes from './routes/analyticsRoutes.js';
 
 const app = express();
 
@@ -37,6 +38,7 @@ app.use('/api/quotations', apiLimiter, quotationRoutes);
 app.use('/api/approvals', apiLimiter, approvalRoutes);
 app.use('/api/purchase-orders', apiLimiter, purchaseOrderRoutes);
 app.use('/api/invoices', apiLimiter, invoiceRoutes);
+app.use('/api/analytics', apiLimiter, analyticsRoutes);
 
 // Basic Health Check Route
 app.get('/api/health', (req, res) => {
