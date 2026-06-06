@@ -8,6 +8,9 @@ import Login from './pages/Login';
 import Register from './pages/Register';
 import Dashboard from './pages/Dashboard';
 import Vendors from './pages/Vendors';
+import Rfqs from './pages/Rfqs';
+import CreateRfq from './pages/CreateRfq';
+import RfqDetail from './pages/RfqDetail';
 
 function App() {
   return (
@@ -21,6 +24,9 @@ function App() {
             <Route element={<Layout />}>
               <Route path="/" element={<Dashboard />} />
               <Route path="/vendors" element={<Vendors />} />
+              <Route path="/rfqs" element={<Rfqs />} />
+              <Route path="/rfqs/create" element={<CreateRfq />} />
+              <Route path="/rfqs/:id" element={<RfqDetail />} />
               {/* Other routes will be added in subsequent phases */}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
