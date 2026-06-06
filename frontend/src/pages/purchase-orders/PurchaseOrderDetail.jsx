@@ -39,7 +39,6 @@ const PurchaseOrderDetail = () => {
   useEffect(() => {
     const fetchPO = async () => {
       setLoading(true);
-      await new Promise(resolve => setTimeout(resolve, 800));
       setPo(MOCK_PO_DETAIL);
       setLoading(false);
     };

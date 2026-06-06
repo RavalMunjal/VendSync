@@ -30,7 +30,6 @@ const RfqDetail = () => {
     // Simulate API fetch
     const fetchRfq = async () => {
       setLoading(true);
-      await new Promise(resolve => setTimeout(resolve, 800));
       setRfq(MOCK_RFQ_DETAIL);
       setLoading(false);
     };

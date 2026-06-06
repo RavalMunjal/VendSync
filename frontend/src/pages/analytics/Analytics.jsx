@@ -17,7 +17,7 @@ const Analytics = () => {
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    setTimeout(() => setLoading(false), 800);
+    setLoading(false);
   }, []);
 
   return (

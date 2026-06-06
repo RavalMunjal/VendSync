@@ -13,8 +13,8 @@ import {
   Plus
 } from 'lucide-react';
 import { 
-  BarChart, 
-  Bar, 
+  AreaChart, 
+  Area, 
   XAxis, 
   YAxis, 
   CartesianGrid, 
@@ -158,23 +158,22 @@ const Dashboard = () => {
           ) : (
             <div className="h-[300px]">
               <ResponsiveContainer width="100%" height="100%">
-                <BarChart data={chartData.monthly} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
+                <AreaChart data={chartData.monthly} margin={{ top: 20, right: 30, left: 20, bottom: 5 }}>
                   <defs>
                     <linearGradient id="colorSpend" x1="0" y1="0" x2="0" y2="1">
-                      <stop offset="5%" stopColor="#6366F1" stopOpacity={0.8}/>
-                      <stop offset="95%" stopColor="#6366F1" stopOpacity={0.2}/>
+                      <stop offset="5%" stopColor="#6366F1" stopOpacity={0.4}/>
+                      <stop offset="95%" stopColor="#6366F1" stopOpacity={0.0}/>
                     </linearGradient>
                   </defs>
                   <CartesianGrid strokeDasharray="3 3" stroke="#2A2D3E" vertical={false} />
                   <XAxis dataKey="name" stroke="#6B7280" tickLine={false} axisLine={false} />
                   <YAxis stroke="#6B7280" tickFormatter={(value) => `₹${value}`} tickLine={false} axisLine={false} />
                   <Tooltip 
-                    cursor={{ fill: 'rgba(99, 102, 241, 0.1)' }}
                     contentStyle={{ backgroundColor: '#1A1D27', borderColor: '#2A2D3E', borderRadius: '12px', color: '#fff', boxShadow: '0 4px 24px rgba(0,0,0,0.2)' }}
                     formatter={(value) => [`₹${value}`, 'Spend']}
                   />
-                  <Bar dataKey="spend" fill="url(#colorSpend)" radius={[6, 6, 0, 0]} />
-                </BarChart>
+                  <Area type="monotone" dataKey="spend" stroke="#6366F1" strokeWidth={3} fillOpacity={1} fill="url(#colorSpend)" />
+                </AreaChart>
               </ResponsiveContainer>
             </div>
           )}

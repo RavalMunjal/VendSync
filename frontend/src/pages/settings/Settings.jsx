@@ -14,7 +14,7 @@ const Settings = () => {
     setTimeout(() => {
       setLoading(false);
       toast.success('Settings saved successfully!');
-    }, 1000);
+    }, 100);
   };
 
   return (

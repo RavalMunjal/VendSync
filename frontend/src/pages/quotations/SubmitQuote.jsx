@@ -50,7 +50,6 @@ const SubmitQuote = () => {
   useEffect(() => {
     const fetchRfq = async () => {
       setLoading(true);
-      await new Promise(resolve => setTimeout(resolve, 800));
       setRfq(MOCK_RFQ_DETAIL);
       
       // Initialize form with items
