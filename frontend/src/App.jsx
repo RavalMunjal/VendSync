@@ -13,6 +13,8 @@ import CreateRfq from './pages/CreateRfq';
 import RfqDetail from './pages/RfqDetail';
 import SubmitQuote from './pages/SubmitQuote';
 import CompareQuotes from './pages/CompareQuotes';
+import Approvals from './pages/Approvals';
+import ActivityLogs from './pages/ActivityLogs';
 
 function App() {
   return (
@@ -31,6 +33,8 @@ function App() {
               <Route path="/rfqs/:id" element={<RfqDetail />} />
               <Route path="/submit-quote/:id" element={<SubmitQuote />} />
               <Route path="/compare" element={<CompareQuotes />} />
+              <Route path="/approvals" element={<Approvals />} />
+              <Route path="/logs" element={<ActivityLogs />} />
               {/* Other routes will be added in subsequent phases */}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
