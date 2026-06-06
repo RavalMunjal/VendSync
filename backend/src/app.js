@@ -15,6 +15,7 @@ import approvalRoutes from './routes/approvalRoutes.js';
 import purchaseOrderRoutes from './routes/purchaseOrderRoutes.js';
 import invoiceRoutes from './routes/invoiceRoutes.js';
 import analyticsRoutes from './routes/analyticsRoutes.js';
+import activityLogRoutes from './routes/activityLogRoutes.js';
 
 const app = express();
 
@@ -39,6 +40,7 @@ app.use('/api/approvals', apiLimiter, approvalRoutes);
 app.use('/api/purchase-orders', apiLimiter, purchaseOrderRoutes);
 app.use('/api/invoices', apiLimiter, invoiceRoutes);
 app.use('/api/analytics', apiLimiter, analyticsRoutes);
+app.use('/api/activity-logs', apiLimiter, activityLogRoutes);
 
 // Basic Health Check Route
 app.get('/api/health', (req, res) => {
