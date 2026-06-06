@@ -9,6 +9,7 @@ import { apiLimiter, authLimiter } from './middleware/rateLimiter.js';
 import authRoutes from './routes/authRoutes.js';
 import userRoutes from './routes/userRoutes.js';
 import vendorRoutes from './routes/vendorRoutes.js';
+import rfqRoutes from './routes/rfqRoutes.js';
 
 const app = express();
 
@@ -27,6 +28,7 @@ app.use(cors({
 app.use('/api/auth', authLimiter, authRoutes);
 app.use('/api/users', apiLimiter, userRoutes);
 app.use('/api/vendors', apiLimiter, vendorRoutes);
+app.use('/api/rfqs', apiLimiter, rfqRoutes);
 
 // Basic Health Check Route
 app.get('/api/health', (req, res) => {
