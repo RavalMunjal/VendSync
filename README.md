@@ -1,373 +1,157 @@
-# 🏆 BidFlow — Procurement & Vendor Management ERP
-
 <div align="center">
 
-![BidFlow Banner](https://img.shields.io/badge/BidFlow-ERP%20Platform-6366F1?style=for-the-badge&logo=data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHZpZXdCb3g9IjAgMCAyNCAyNCI+PHBhdGggZmlsbD0id2hpdGUiIGQ9Ik0xMiAyTDIgN2wxMCA1IDEwLTV6Ii8+PC9zdmc+)
+# 🚀 VendSync
+**The Ultimate Procurement & Vendor Management ERP**
 
-![React](https://img.shields.io/badge/React_18-61DAFB?style=for-the-badge&logo=react&logoColor=black)
-![Node.js](https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white)
-![MongoDB](https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white)
-![Express](https://img.shields.io/badge/Express.js-000000?style=for-the-badge&logo=express&logoColor=white)
-![TailwindCSS](https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white)
-![JWT](https://img.shields.io/badge/JWT-000000?style=for-the-badge&logo=jsonwebtokens&logoColor=white)
+<p align="center">
+  <img src="https://img.shields.io/badge/Odoo%20x%20Ksv%20Hackathon-Submission-FF6B6B?style=for-the-badge" alt="Hackathon Submission" />
+  <img src="https://img.shields.io/badge/React_19-61DAFB?style=for-the-badge&logo=react&logoColor=black" alt="React 19" />
+  <img src="https://img.shields.io/badge/Node.js-339933?style=for-the-badge&logo=nodedotjs&logoColor=white" alt="Node.js" />
+  <img src="https://img.shields.io/badge/MongoDB-47A248?style=for-the-badge&logo=mongodb&logoColor=white" alt="MongoDB" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind" />
+</p>
 
-**A production-grade, full-stack Procurement & Vendor Management ERP built for modern organizations.**
+### 🔗 Live Links
+**[Frontend (Vercel)](https://vend-sync-om12.vercel.app/login)** | **[Backend API Health (Render)](https://vendsync.onrender.com/api/health)**
 
-[Live Demo](#) · [Report Bug](#) · [Request Feature](#)
+*A production-grade, full-stack B2B procurement workflow solution.*
 
 </div>
 
 ---
 
-## 📋 Table of Contents
-
-- [About the Project](#-about-the-project)
-- [Features](#-features)
-- [Tech Stack](#-tech-stack)
-- [Project Structure](#-project-structure)
-- [Getting Started](#-getting-started)
-- [Environment Variables](#-environment-variables)
-- [API Documentation](#-api-documentation)
-- [User Roles](#-user-roles)
-- [Workflow](#-workflow)
-- [Screenshots](#-screenshots)
-- [Team](#-team)
-
----
-
 ## 🎯 About the Project
 
-**BidFlow** is a centralized Procurement & Vendor Management ERP platform that eliminates manual procurement inefficiencies. It enables structured workflows, centralized vendor communication, and real-time procurement tracking — from RFQ creation to invoice generation.
+**VendSync** is a centralized Procurement & Vendor Management ERP platform designed specifically for the **Odoo x Ksv Hackathon**. It eliminates manual procurement inefficiencies, enabling structured workflows, centralized vendor communication, and real-time procurement tracking — from RFQ creation to invoice generation.
 
-### Problem it Solves
-- ❌ Manual emails for vendor communication
-- ❌ Excel sheets for quotation comparison
-- ❌ No structured approval process
-- ❌ Zero visibility into procurement spending
+### ⚠️ Problem Statement
+- ❌ Fragmented email threads for vendor communication and negotiation.
+- ❌ Messy Excel sheets for quotation comparison.
+- ❌ No structured, multi-tier approval process.
+- ❌ Zero visibility into procurement spending and vendor performance.
 
-### What BidFlow Does
-- ✅ Digitizes the entire procurement lifecycle
-- ✅ Role-based access for all stakeholders
-- ✅ Real-time dashboard with analytics
-- ✅ Auto-generated POs and invoices with PDF export
+### 💡 The VendSync Solution
+- ✅ **Digitizes the entire procurement lifecycle** in a single pane of glass.
+- ✅ **Role-based access (RBAC)** for Admins, Managers, Procurement Officers, and Vendors.
+- ✅ **Real-time analytical dashboard** for spending trends and KPIs.
+- ✅ **Automated Purchase Orders & Invoices** with PDF export capabilities.
 
 ---
 
-## ✨ Features
+## ✨ Key Features
 
-### Core Features
-| Feature | Description |
+### 🏢 Vendor & Procurement Ecosystem
+| Module | Description |
 |---|---|
-| 🔐 **Auth & Roles** | JWT-based login with 4 role types |
-| 🏢 **Vendor Management** | Register, track, rate, and manage vendors |
-| 📋 **RFQ Creation** | Multi-step RFQ with item management & vendor assignment |
-| 💬 **Quotation System** | Vendors submit, edit, and withdraw quotations |
-| ⚖️ **Quotation Comparison** | Side-by-side comparison with lowest price highlighting |
-| ✅ **Approval Workflow** | Structured approve/reject with remarks & timeline |
-| 📦 **Purchase Orders** | Auto-generated POs from approved quotations |
-| 🧾 **Invoice Generation** | Professional invoices with GST calculation |
-| 📄 **PDF Export** | Download invoice as PDF |
-| 📊 **Analytics Dashboard** | Charts, KPIs, spending trends |
-| 📝 **Activity Logs** | Full audit trail of all procurement actions |
-| 🌙 **Dark / Light Mode** | Persistent theme toggle |
+| 🔐 **RBAC Security** | JWT-based authentication with 4 distinct role types. |
+| 🏢 **Vendor Portal** | Vendors can register, view assigned RFQs, and submit quotations independently. |
+| 📋 **RFQ Management** | Multi-step Request For Quotation creation with item/quantity management. |
+| 💬 **Quotation Engine** | Vendors submit, edit, and withdraw bids; buyers compare side-by-side. |
+| ⚖️ **Smart Comparison** | Visual matrix for comparing quotations with lowest price auto-highlighting. |
+
+### 📋 Workflows & Finance
+| Module | Description |
+|---|---|
+| ✅ **Approval Workflow** | Structured Accept/Reject capabilities with remarks for internal managers. |
+| 📦 **Purchase Orders** | Auto-generation of structured POs upon quotation approval. |
+| 🧾 **Automated Invoices** | Professional invoice generation with embedded tax calculations. |
+| 📄 **Export to PDF** | One-click download of POs and Invoices as formatted PDFs. |
+| 📊 **Advanced Analytics** | Interactive charts (Recharts) detailing spending trends and system KPIs. |
+| 📝 **Audit Trail** | Comprehensive activity logging tracking "who did what and when". |
 
 ---
 
 ## 🛠 Tech Stack
 
-### Frontend
-| Technology | Purpose |
-|---|---|
-| React 18 + Vite | UI framework + fast build tool |
-| Tailwind CSS | Utility-first styling |
-| React Router DOM v6 | Client-side routing |
-| Axios | HTTP client with interceptors |
-| Recharts | Analytics charts |
-| React Hook Form + Zod | Form handling + validation |
-| React Hot Toast | Toast notifications |
-| Lucide React | Icon library |
-| jsPDF + html2canvas | PDF generation |
+**Frontend Architecture:**
+- **Core:** React 19, Vite, Javascript
+- **Styling:** Tailwind CSS, Lucide React Icons
+- **State & Routing:** React Router v7
+- **Forms & Validation:** React Hook Form, Zod
+- **Data Visualization:** Recharts
+- **Networking:** Axios (with auth interceptors)
 
-### Backend
-| Technology | Purpose |
-|---|---|
-| Node.js + Express.js | REST API server |
-| MongoDB + Mongoose | Database + ODM |
-| JWT + bcryptjs | Authentication + password hashing |
-| express-validator | Input validation |
-| Helmet + CORS | Security headers |
-| Morgan | HTTP request logging |
-| express-rate-limit | Rate limiting |
-| Nodemailer | Email service |
-| PDFKit | Server-side PDF generation |
+**Backend Architecture:**
+- **Core:** Node.js, Express.js
+- **Database:** MongoDB Atlas, Mongoose ODM
+- **Authentication:** JWT, bcryptjs
+- **Security:** Helmet, CORS, express-rate-limit
+- **PDF Generation:** PDFKit
 
 ---
 
-## 📁 Project Structure
-
-```
-bidflow/
-├── 📁 bidflow-frontend/
-│   ├── src/
-│   │   ├── api/              → Axios instance + all API functions
-│   │   ├── components/
-│   │   │   ├── layout/       → Sidebar, Navbar, Layout
-│   │   │   ├── ui/           → StatCard, Modal, Badge, Skeleton, Table
-│   │   │   └── charts/       → SpendBarChart, CategoryDonutChart
-│   │   ├── context/          → AuthContext (JWT + role)
-│   │   ├── hooks/            → useAuth, useFetch
-│   │   ├── pages/
-│   │   │   ├── auth/         → LoginPage
-│   │   │   ├── dashboard/    → DashboardPage
-│   │   │   ├── vendors/      → VendorsPage, VendorDetailPage
-│   │   │   ├── rfqs/         → RFQsPage, CreateRFQ, Compare
-│   │   │   ├── quotations/   → QuotationsPage
-│   │   │   ├── approvals/    → ApprovalsPage
-│   │   │   ├── purchase-orders/ → POsPage, PODetailPage
-│   │   │   ├── invoices/     → InvoicesPage, InvoiceDetailPage
-│   │   │   ├── users/        → UsersPage (Admin)
-│   │   │   ├── analytics/    → AnalyticsPage
-│   │   │   ├── logs/         → LogsPage
-│   │   │   └── settings/     → SettingsPage
-│   │   ├── routes/           → ProtectedRoute, RoleRoute
-│   │   ├── utils/            → formatCurrency, formatDate
-│   │   └── App.jsx
-│   ├── .env
-│   └── package.json
-│
-└── 📁 bidflow-backend/
-    ├── src/
-    │   ├── config/           → db.js
-    │   ├── models/           → User, Vendor, RFQ, Quotation,
-    │   │                        Approval, PurchaseOrder, Invoice, ActivityLog
-    │   ├── controllers/      → All business logic
-    │   ├── routes/           → All Express routers
-    │   ├── middleware/        → auth, role, validate, errorHandler, rateLimiter
-    │   └── utils/            → generateNumber, activityLogger, emailService, pdfGenerator
-    ├── server.js
-    ├── .env
-    └── package.json
-```
-
----
-
-## 🚀 Getting Started
+## 🚀 Getting Started Locally
 
 ### Prerequisites
 - Node.js v18+
-- MongoDB Atlas account (free tier works)
-- Git
+- MongoDB instance (local or Atlas)
 
-### 1. Clone the Repository
-
+### 1. Clone & Install
 ```bash
-git clone https://github.com/yourusername/bidflow.git
-cd bidflow
+git clone https://github.com/RavalMunjal/VendSync.git
+cd VendSync
 ```
 
-### 2. Setup Backend
-
+### 2. Backend Setup
 ```bash
-cd bidflow-backend
+cd backend
 npm install
 cp .env.example .env
-# Fill in your .env values (see below)
+# Set MONGO_URI, JWT_SECRET, etc in .env
 npm run dev
 ```
 
-Backend runs on: `http://localhost:5000`
-
-### 3. Setup Frontend
-
+### 3. Frontend Setup
 ```bash
-cd bidflow-frontend
+cd ../frontend
 npm install
-cp .env.example .env
-# Set VITE_API_URL=http://localhost:5000
+# Ensure .env contains VITE_API_URL=http://localhost:5000/api
 npm run dev
 ```
 
-Frontend runs on: `http://localhost:5173`
-
-### 4. Seed Demo Data (For judges / demo)
-
-```bash
-cd bidflow-backend
-npm run seed
-```
-
-This creates all demo users, vendors, RFQs, quotations, approvals, POs, and invoices instantly.
-
 ---
 
-## 🔐 Environment Variables
+## 📡 API Architecture
 
-### Backend `.env`
+The backend REST API is hosted at: `https://vendsync.onrender.com/api`
 
-```env
-PORT=5000
-MONGO_URI=mongodb+srv://<username>:<password>@cluster0.mongodb.net/bidflow?appName=Cluster0
-
-JWT_SECRET=bidflow_super_secret_jwt_key_2024
-JWT_EXPIRES_IN=7d
-
-CLIENT_URL=http://localhost:5173
-
-EMAIL_HOST=smtp.gmail.com
-EMAIL_PORT=587
-EMAIL_USER=your@gmail.com
-EMAIL_PASS=your_app_password
-EMAIL_FROM=BidFlow <your@gmail.com>
-
-NODE_ENV=development
-```
-
-### Frontend `.env`
-
-```env
-VITE_API_URL=http://localhost:5000
-```
-
----
-
-## 📡 API Documentation
-
-### Base URL
-```
-http://localhost:5000/api
-```
-
-### Response Format (Always)
-```json
-{ "success": true, "data": {}, "message": "Action completed" }
-{ "success": false, "error": "Error message", "code": 403 }
-```
-
-### Endpoints Overview
-
-| Module | Base Route | Methods |
+| Module | Base Route | Description |
 |---|---|---|
-| Auth | `/api/auth` | POST register, POST login, GET me |
-| Users | `/api/users` | Full CRUD (Admin) |
-| Vendors | `/api/vendors` | Full CRUD + stats |
-| RFQs | `/api/rfqs` | Full CRUD + publish/close/compare/award |
-| Quotations | `/api/quotations` | Submit/edit/withdraw |
-| Approvals | `/api/approvals` | Approve/reject workflow |
-| Purchase Orders | `/api/purchase-orders` | Generate/send/acknowledge |
-| Invoices | `/api/invoices` | Generate/send/PDF/mark-paid |
-| Analytics | `/api/analytics` | Dashboard + trends + reports |
-| Activity Logs | `/api/logs` | Full audit trail |
-
-### Health Check
-```
-GET /api/health
-→ { "success": true, "message": "BidFlow API running" }
-```
+| **Auth** | `/api/auth` | Register, Login, Get Current User |
+| **Vendors** | `/api/vendors` | Manage vendor directory & performance stats |
+| **RFQs** | `/api/rfqs` | Create, publish, compare, and award RFQs |
+| **Quotations** | `/api/quotations` | Handle vendor bids |
+| **Approvals** | `/api/approvals` | Manager-level authorization workflows |
+| **POs** | `/api/purchase-orders` | Generate and track Purchase Orders |
+| **Invoices** | `/api/invoices` | Generate, track, and pay Invoices |
+| **Analytics** | `/api/analytics` | Fetch metrics for the dashboard |
+| **Logs** | `/api/logs` | Comprehensive activity audit logs |
 
 ---
 
-## 👤 User Roles
+## 👥 User Roles & Demo Flow
 
-| Role | Access |
-|---|---|
-| **Admin** | Full access — users, vendors, analytics, all modules |
-| **Procurement Officer** | Create RFQ, compare quotes, generate PO & invoice |
-| **Manager** | Approve/reject procurement requests, monitor workflows |
-| **Vendor** | Submit quotations, track RFQ status, view own POs |
+The system supports a hierarchical structure:
 
-### Demo Credentials (after `npm run seed`)
+1. **Admin:** Full system access.
+2. **Manager:** Approves or rejects procurement requests and POs.
+3. **Procurement Officer:** Creates RFQs, invites vendors, compares quotes, generates POs.
+4. **Vendor:** Receives RFQs, submits price quotations, views approved POs.
 
-| Role | Email | Password |
-|---|---|---|
-| Admin | admin@bidflow.com | Admin@123 |
-| Manager | manager@bidflow.com | Manager@123 |
-| Procurement Officer | officer@bidflow.com | Officer@123 |
-| Vendor | vendor1@bidflow.com | Vendor@123 |
-
----
-
-## 🔄 Workflow
-
-```
-1. 👷 Procurement Officer creates an RFQ
-        ↓
-2. 📧 Vendors receive notification & submit quotations
-        ↓
-3. ⚖️  Officer compares quotations side-by-side
-        ↓
-4. ✅ Officer selects best quote → sends for approval
-        ↓
-5. 👔 Manager approves/rejects with remarks
-        ↓
-6. 📦 Officer generates Purchase Order (auto PO number)
-        ↓
-7. 🧾 Invoice generated from PO (auto Invoice number)
-        ↓
-8. 📄 Invoice downloaded as PDF / sent via email
-        ↓
-9. 📊 All activities tracked in logs & analytics
-```
-
----
-
-## 🗄️ Database Models
-
-```
-User          → Authentication & role management
-Vendor        → Vendor profiles & ratings
-RFQ           → Request for Quotation with line items
-Quotation     → Vendor bids on RFQs
-Approval      → Approval workflow records
-PurchaseOrder → Generated from approved quotations
-Invoice       → Generated from purchase orders
-ActivityLog   → Full audit trail of all actions
-```
-
----
-
-## 📊 Key Metrics Tracked
-
-- Total procurement spend (monthly trend)
-- Vendor performance (orders, spend, rating)
-- RFQ to PO conversion rate
-- Pending approvals count
-- Spending by vendor category
-- Invoice payment status
-
----
-
-## 🏗️ Architecture Highlights
-
-- **Role-based middleware** on every protected route
-- **Pre-save hooks** for auto GST & total calculations
-- **Sequential number generation** for PO/Invoice (PO-202506-0001)
-- **Promise.all** on dashboard for parallel DB queries
-- **Activity logging** on every create/update/delete/approve
-- **Global error handler** — consistent error format
-- **Rate limiting** — 10 req/15min on auth, 100 req/15min on API
-
----
-
-## 🤝 Team
-
-| Name | Role |
-|---|---|
-| Your Name | Full Stack Developer |
-
----
-
-## 📄 License
-
-This project was built for a **Hackathon**. All rights reserved.
+### Demo Credentials (if seeded):
+- **Admin:** `admin@bidflow.com` | `Admin@123`
+- **Manager:** `manager@bidflow.com` | `Manager@123`
+- **Procurement:** `officer@bidflow.com` | `Officer@123`
+- **Vendor:** `vendor1@bidflow.com` | `Vendor@123` 
+*(Note: Use actual user credentials from your database for the live demo)*
 
 ---
 
 <div align="center">
 
-**Built with ❤️ for Hackathon 2026**
+### 🏆 Built for the Odoo x Ksv Hackathon 🏆
 
-⭐ Star this repo if you found it helpful!
-#thankyou all of you for watching my project
-
+*Thank you to the judges and organizers for this amazing opportunity!*
+⭐ Star this repo if you liked our project!
 
 </div>
