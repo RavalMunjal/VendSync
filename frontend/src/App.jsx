@@ -15,6 +15,8 @@ import SubmitQuote from './pages/SubmitQuote';
 import CompareQuotes from './pages/CompareQuotes';
 import Approvals from './pages/Approvals';
 import ActivityLogs from './pages/ActivityLogs';
+import PurchaseOrders from './pages/PurchaseOrders';
+import PurchaseOrderDetail from './pages/PurchaseOrderDetail';
 
 function App() {
   return (
@@ -35,6 +37,8 @@ function App() {
               <Route path="/compare" element={<CompareQuotes />} />
               <Route path="/approvals" element={<Approvals />} />
               <Route path="/logs" element={<ActivityLogs />} />
+              <Route path="/pos" element={<PurchaseOrders />} />
+              <Route path="/pos/:id" element={<PurchaseOrderDetail />} />
               {/* Other routes will be added in subsequent phases */}
               <Route path="*" element={<Navigate to="/" replace />} />
             </Route>
